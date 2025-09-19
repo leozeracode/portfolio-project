@@ -32,7 +32,7 @@ export default function Portfolio() {
       <About/>
       <Skill/>
       <Experience/>
-      <Projects />
+      {/* <Projects /> */}
       <Certifications />
       <Contact />
       <Footer />
