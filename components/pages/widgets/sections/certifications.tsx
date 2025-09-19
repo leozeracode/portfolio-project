@@ -33,59 +33,95 @@ export const Certifications: React.FC = () => {
         >
           {[
             {
-              title: "AWS Certified Solutions Architect",
-              issuer: "Amazon Web Services",
-              date: "2023",
-              description: "Professional level certification for designing distributed systems on AWS",
-              preview: "/certificates/aws-solutions-architect.pdf",
-              badge: "AWS",
-              color: "from-orange-500 to-yellow-500",
+              title: "EF SET English Certificate",
+              issuer: "EF C1 Advanced",
+              date: "2025",
+              description: "High proficiency in English language skills certified by EF SET",
+              preview: "/certificates/ef-set-certificate.pdf",
+              badge: "EF SET",
+              url: "https://cert.efset.org/en/fapy65",
+              color: "from-green-400 to-teal-400",
             },
             {
-              title: "Microsoft Azure Developer Associate",
-              issuer: "Microsoft",
-              date: "2022",
-              description: "Certification for developing and maintaining cloud applications on Azure",
-              preview: "/certificates/azure-developer.pdf",
-              badge: "Azure",
-              color: "from-blue-500 to-cyan-500",
+              title: "Uncomplicating Kubernetes",
+              issuer: "Linuxtips",
+              date: "2024",
+              description: "Comprehensive Kubernetes course covering core concepts and practical applications",
+              preview: "/certificates/uncomplicating-kubernetes.png",
+              badge: "Kubernetes",
+              url: "https://www.credential.net/3705a113-5193-4995-a475-705ca7108730#acc.UpQhq3MZ",
+              color: "from-purple-400 to-indigo-400",
             },
             {
-              title: "React Developer Certification",
-              issuer: "Meta",
+              title: "Serverless Framework Bootcamp",
+              issuer: "Udemy",
               date: "2023",
-              description: "Advanced React development patterns and best practices",
-              preview: "/certificates/react-developer.pdf",
-              badge: "React",
+              description: "Serverless Framework Bootcamp: Node.js, AWS & Microservices",
+              preview: "/certificates/serverless-bootcamp.pdf",
+              badge: "Serverless",
+              url: "https://www.udemy.com/certificate/UC-5fb05821-6f01-47c5-8df4-dd28236e9cd4/",
+              color: "from-yellow-400 to-orange-400",
+            },
+            {
+              title: "Microservices Architecture",
+              issuer: "Udemy",
+              date: "2023",
+              description: "Microservices Architecture and Implementation on .NET",
+              preview: "/certificates/microservices-architecture-dotnet.pdf",
+              badge: "Microservices",
+              url: "https://www.udemy.com/certificate/UC-73b836ac-64b4-46a4-8918-a72f22b87d5f/",
+              color: "from-red-400 to-pink-400",
+            },
+            {
+              title: "Clean Architecture in ReactJS",
+              issuer: "Udemy",
+              date: "2023",
+              description: "ReactJS, Hooks, Recoil, TDD, Clean Architecture, SOLID",
+              preview: "/certificates/clean-architecture-reactjs.pdf",
+              badge: "ReactJS",
+              url: "https://www.udemy.com/certificate/UC-e3315d63-6707-4cbf-bdff-b722930330b9/",
               color: "from-blue-400 to-cyan-400",
             },
             {
-              title: "Node.js Application Developer",
-              issuer: "OpenJS Foundation",
-              date: "2022",
-              description: "Professional Node.js development and server-side JavaScript",
-              preview: "/certificates/nodejs-developer.pdf",
+              title: "Advanced Node.js",
+              issuer: "Udemy",
+              date: "2023",
+              description: "Advanced Node.js with TDD, Clean Architecture and Typescript",
+              preview: "/certificates/advanced-nodejs.pdf",
+              badge: "Advanced Node.js",
+              url: "https://www.udemy.com/certificate/UC-859c8247-a829-40f5-8050-a6045148ed75/",
+              color: "from-green-400 to-emerald-400",
+            },
+            {
+              title: "Clean Architecture in Node.js",
+              issuer: "Udemy",
+              date: "2020",
+              description: "Node.js, Typescript, TDD, Clean Architecture and SOLID",
+              preview: "/certificates/clean-architecture-nodejs.pdf",
               badge: "Node.js",
-              color: "from-green-500 to-emerald-500",
+              url: "https://www.udemy.com/certificate/UC-736dc484-df50-42fd-bed5-13e64796577d/",
+              color: "from-yellow-400 to-amber-400",
             },
             {
-              title: "Docker Certified Associate",
-              issuer: "Docker Inc.",
-              date: "2023",
-              description: "Container orchestration and Docker ecosystem expertise",
-              preview: "/certificates/docker-certified.pdf",
-              badge: "Docker",
-              color: "from-blue-600 to-indigo-600",
+              title: "Apache Kafka",
+              issuer: "Desenvolvedor.io",
+              date: "2024",
+              description: "Comprehensive course on Apache Kafka for building real-time data pipelines and streaming apps",
+              preview: "/certificates/apache-kafka.png",
+              badge: "Kafka",
+              url: "https://desenvolvedor.io/certificado/925bccea-dfd4-4302-9c52-132da5c6e62f",
+              color: "from-red-400 to-rose-400",
             },
             {
-              title: "Kubernetes Administrator",
-              issuer: "Cloud Native Computing Foundation",
-              date: "2023",
-              description: "Kubernetes cluster administration and orchestration",
-              preview: "/certificates/kubernetes-admin.pdf",
+              title: "Kubernetes for Developers",
+              issuer: "Desenvolvedor.io",
+              date: "2024",
+              description: "In-depth Kubernetes course covering container orchestration, deployment, and management",
+              preview: "/certificates/kubernetes-developers.png",
               badge: "K8s",
-              color: "from-purple-500 to-pink-500",
-            },
+              url: "https://desenvolvedor.io/certificado/a30a452b-ecc4-481f-9153-b751024540f8",
+              color: "from-purple-400 to-fuchsia-400",
+            }
           ].map((cert, index) => (
             <motion.div key={index} variants={fadeInUp} className="group cursor-pointer" whileHover={{ y: -10 }}>
               <Card className="h-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-purple-400/50 transition-all">
@@ -118,43 +154,45 @@ export const Certifications: React.FC = () => {
                       <span className="text-sm text-gray-300">Certificate Preview</span>
                     </div>
 
-                    <div className="bg-white rounded-sm p-3 text-xs text-gray-800 space-y-2">
-                      <div className="flex justify-between items-center">
-                        <div className="font-bold text-blue-600">{cert.issuer}</div>
-                        <div className="text-gray-500">{cert.date}</div>
-                      </div>
-                      <div className="text-center py-4">
-                        <div className="font-bold text-lg mb-2">CERTIFICATE</div>
-                        <div className="text-sm mb-1">This certifies that</div>
-                        <div className="font-bold text-base">Leonardo Viana</div>
-                        <div className="text-sm mt-2">has successfully completed</div>
-                        <div className="font-semibold">{cert.title}</div>
-                      </div>
-                      <div className="flex justify-between text-xs text-gray-500">
-                        <span>Certificate ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</span>
-                        <span>Verified</span>
-                      </div>
-                    </div>
+                    {cert.preview.endsWith('.pdf') ? (
+                      <iframe
+                        src={cert.preview}
+                        title={`${cert.title} Preview`}
+                        className="w-full h-48 rounded border-none"
+                      />
+                    ) : (
+                      <img
+                        src={cert.preview}
+                        alt={`${cert.title} Preview`}
+                        className="w-full h-48 object-contain rounded"
+                      />
+                    )}
                   </div>
 
                   <div className="flex space-x-2">
                     <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
                       <Button
-                        size="sm"
-                        variant="outline"
-                        className="w-full bg-transparent border-white/20 text-white hover:bg-white/10 cursor-pointer text-xs"
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="w-full bg-transparent border-white/20 text-white hover:bg-white/10 cursor-pointer text-xs"
                       >
+                      <a href={cert.url} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-3 h-3 mr-2" />
                         View
+                      </a>
                       </Button>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
                       <Button
-                        size="sm"
-                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 cursor-pointer text-xs"
+                      asChild
+                      size="sm"
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 cursor-pointer text-xs"
                       >
+                      <a href={cert.preview} download target="_blank" rel="noopener noreferrer">
                         <Download className="w-3 h-3 mr-2" />
-                        PDF
+                        Download
+                      </a>
                       </Button>
                     </motion.div>
                   </div>
